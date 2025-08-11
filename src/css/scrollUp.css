@@ -1,0 +1,33 @@
+.scroll-up-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: transparent;     /* Şeffaf arka plan */
+  border: 2px solid white;           /* Varsayılan: beyaz border */
+  color: white;                      /* Varsayılan: beyaz yazı */
+  font-size: 24px;
+  display: none;                     /* Başlangıçta gizli */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.scroll-up-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Light tema için: siyah border ve beyaz ikon/rakam */
+html.light-theme .scroll-up-button {
+  border-color: black;
+  color: black;
+}
+
+html.light-theme .scroll-up-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
